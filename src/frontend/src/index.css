@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Light main content background #F6F7F9 */
+    --background: 0.972 0.005 240;
+    --foreground: 0.175 0.025 235;
+
+    /* Cards: white */
+    --card: 1 0 0;
+    --card-foreground: 0.175 0.025 235;
+    --popover: 1 0 0;
+    --popover-foreground: 0.175 0.025 235;
+
+    /* Primary teal #0F7C73 */
+    --primary: 0.5 0.11 185;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.94 0.01 220;
+    --secondary-foreground: 0.26 0.07 230;
+    --muted: 0.94 0.008 220;
+    --muted-foreground: 0.52 0.04 230;
+    --accent: 0.93 0.03 185;
+    --accent-foreground: 0.5 0.11 185;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.905 0.01 230;
+    --input: 0.91 0.01 220;
+    --ring: 0.5 0.11 185;
+
+    /* Sidebar dark #0E2433 */
+    --sidebar: 0.195 0.045 225;
+    --sidebar-foreground: 0.97 0.005 220;
+    --sidebar-primary: 0.5 0.11 185;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.24 0.055 225;
+    --sidebar-accent-foreground: 0.97 0.005 220;
+    --sidebar-border: 0.28 0.04 225;
+    --sidebar-ring: 0.5 0.11 185;
+
+    /* Brand tokens */
+    --teal: 0.5 0.11 185;
+    --teal-bright: 0.53 0.13 185;
+    --navy-dark: 0.14 0.04 225;
+    --text-secondary: 0.52 0.04 230;
+
+    /* Charts */
+    --chart-1: 0.5 0.11 185;
+    --chart-2: 0.62 0.14 185;
+    --chart-3: 0.65 0.15 145;
+    --chart-4: 0.72 0.17 55;
+    --chart-5: 0.62 0.22 27;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .sidebar-bg {
+    background: linear-gradient(
+      180deg,
+      oklch(0.14 0.04 225) 0%,
+      oklch(0.195 0.045 225) 100%
+    );
+  }
+
+  .app-bg {
+    background: linear-gradient(
+      135deg,
+      oklch(0.12 0.04 225) 0%,
+      oklch(0.19 0.04 190) 100%
+    );
+  }
+
+  .teal-progress::-webkit-progress-value {
+    background-color: oklch(0.5 0.11 185);
+  }
+
+  .status-amber {
+    background: oklch(0.93 0.12 75);
+    color: oklch(0.52 0.18 75);
+  }
+
+  .status-green {
+    background: oklch(0.93 0.1 145);
+    color: oklch(0.42 0.16 145);
+  }
+
+  .status-yellow {
+    background: oklch(0.95 0.12 88);
+    color: oklch(0.52 0.18 88);
+  }
+
+  .status-blue {
+    background: oklch(0.93 0.08 240);
+    color: oklch(0.45 0.15 240);
+  }
+
+  .risk-low {
+    background: oklch(0.93 0.1 145);
+    color: oklch(0.38 0.16 145);
+  }
+
+  .risk-moderate {
+    background: oklch(0.93 0.12 75);
+    color: oklch(0.5 0.18 75);
+  }
+
+  .risk-high {
+    background: oklch(0.93 0.15 27);
+    color: oklch(0.48 0.22 27);
+  }
+}
